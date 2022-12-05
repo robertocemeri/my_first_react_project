@@ -1,5 +1,5 @@
 import RobertoExpense from "./components/roberto/RobertoExpenses";
-import LoriExpenses from "./components/lori/LoriExpenses";
+import LoriExpenses from "./components/lori/Expenses/LoriExpenses";
 function App() {
   const expenses = [
     {
