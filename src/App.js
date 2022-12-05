@@ -1,4 +1,4 @@
-import RobertoExpense from "./components/roberto/RobertoExpenses";
+import Expenses from "./components/Expenses/Expenses";
 import LoriExpenses from "./components/lori/LoriExpenses";
 function App() {
   const expenses = [
@@ -32,7 +32,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <LoriExpenses items={expenses} />
-      {/* <RobertoExpense items={expenses} /> */}
+      <Expenses items={expenses} />
     </div>
   );
 }
