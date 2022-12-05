@@ -1,5 +1,6 @@
+import LoriExpenses from "./components/lori/Expenses/LoriExpenses";
 import Expenses from "./components/Expenses/Expenses";
-import LoriExpenses from "./components/lori/LoriExpenses";
+
 function App() {
   const expenses = [
     {

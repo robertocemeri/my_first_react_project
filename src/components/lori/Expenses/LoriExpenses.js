@@ -1,5 +1,5 @@
 import LoriExpenseItem from "./LoriExpenseItem";
-import Card from "./Card";
+import Card from "../UI/Card";
 import "./LoriExpenses.css";
 
 function LoriExpenses(props) {
