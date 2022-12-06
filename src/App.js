@@ -1,6 +1,6 @@
 import LoriExpenses from "./components/lori/Expenses/LoriExpenses";
 import Expenses from "./components/Expenses/Expenses";
-
+import NewExpense from "./components/NewExpense/NewExpense";
 function App() {
   const expenses = [
     {
@@ -33,6 +33,8 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <LoriExpenses items={expenses} />
+      <NewExpense />
+
       <Expenses items={expenses} />
     </div>
   );
