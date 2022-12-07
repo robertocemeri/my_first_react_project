@@ -1,26 +1,30 @@
 import LoriExpenseItem from "./LoriExpenseItem";
 import Card from "../UI/Card";
 import "./LoriExpenses.css";
-
+import LoriExpensesFilter from "./LoriExpensesFilter";
+import React, { useState } from "react";
 function LoriExpenses(props) {
+  const [selected, setSelected] = useState("2020");
+  const filterValue = (value) => {
+    setSelected(value);
+
+    console.log(value);
+  };
   return (
-    <Card className="expenses">
-      <LoriExpenseItem
-        title={props.items[0].title}
-        date={props.items[0].date}
-        amount={props.items[0].amount}
-      />
-      <LoriExpenseItem
-        title={props.items[1].title}
-        date={props.items[1].date}
-        amount={props.items[1].amount}
-      />
-      <LoriExpenseItem
-        title={props.items[2].title}
-        date={props.items[2].date}
-        amount={props.items[2].amount}
-      />
-    </Card>
+    <div>
+      <Card className="expenses">
+        <LoriExpensesFilter selected={selected} onChangeFilter={filterValue} />
+
+        {props.items.map((expense) => (
+          <LoriExpenseItem
+            title={expense.title}
+            date={expense.date}
+            amount={expense.amount}
+            key={expense.id}
+          />
+        ))}
+      </Card>
+    </div>
   );
 }
 export default LoriExpenses;
