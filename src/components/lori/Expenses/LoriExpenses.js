@@ -1,4 +1,3 @@
-import LoriExpenseItem from "./LoriExpenseItem";
 import Card from "../UI/Card";
 import "./LoriExpenses.css";
 import LoriExpensesFilter from "./LoriExpensesFilter";
