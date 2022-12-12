@@ -3,6 +3,8 @@ import "./LoriExpenses.css";
 import LoriExpensesFilter from "./LoriExpensesFilter";
 import React, { useState } from "react";
 import LoriExpensesList from "./LoriExpensesList";
+import LoriExpensesChart from "../LoriChart/LoriChart";
+
 function LoriExpenses(props) {
   const [selected, setSelected] = useState("2020");
   const filterValue = (value) => {
@@ -18,7 +20,7 @@ function LoriExpenses(props) {
     <div>
       <Card className="expenses">
         <LoriExpensesFilter selected={selected} onChangeFilter={filterValue} />
-
+        <LoriExpensesChart expenses={filteredExpenses} />
         <LoriExpensesList items={filteredExpenses} />
         {/* 
         {filteredExpenses.length === 0 && <p>No expenses found</p>}
